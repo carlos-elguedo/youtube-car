@@ -8,8 +8,12 @@ const config = require('../../config');
 
 const videoIdOfUrl = getParameterByName('videoId');
 
+var ban = true;
+
 class Player extends Component {
   
+  
+
   constructor(){
 
     super();
@@ -22,7 +26,12 @@ class Player extends Component {
     this.getVideo = this.getVideo.bind(this);
     this.viewNewVideo = this.viewNewVideo.bind(this);
     this.getRecommendedVideos = this.getRecommendedVideos.bind(this);
-    this.getVideo();
+    
+        this.getVideo();
+    
+
+    
+    
   }
   
 
@@ -39,7 +48,7 @@ class Player extends Component {
 
     this.state.videoDetails.map((video, i) => {
       this.setState({
-        title: 'Player: ' + video.snippet.title,
+        title: ' Player: ' + video.snippet.title,
       });
     });
 

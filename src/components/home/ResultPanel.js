@@ -21,7 +21,7 @@ class ResultPanel extends Component{
                                         <h5 className="card-title">{video.snippet.title}</h5>
                                         <h6 className="card-subtitle mb-2 text-muted">{video.snippet.channelTitle}</h6>
                                         <p className="card-text text-truncate"> {video.snippet.description}</p>
-                                        <Link to={`/player?videoId=${video.id.videoId}`}>VER</Link>
+                                        <Link to={`/player?videoId=${video.id.videoId}`} target="_blank">VER</Link>
                                     </div>
                                 </div>
                             </div>

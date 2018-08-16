@@ -50,7 +50,7 @@ class Home extends Component {
           searched_total: data,
           result_title: `Results for ${this.state.search}`
           });
-        console.log(this.state.searched.items);
+        console.log(this.state.searched);
       });
       
   }

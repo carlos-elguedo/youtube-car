@@ -6,12 +6,12 @@ class Header extends Component{
     render(){
         return(
                 <nav className="navbar navbar-light bg-danger">
-                    <a className="navbar-brand text-white" href="">
-                        <Link to={`/`}>
+                <Link to={`/`}>
+                    <div className="navbar-brand text-white" href="">
                             <img src="assets/images/logo.jpg" width="30" height="30" className="d-inline-block align-top" alt=""/>
-                        </Link>
                         {this.props.nav_title}
-                    </a>
+                    </div>
+                </Link>
                 </nav>
         
         );
