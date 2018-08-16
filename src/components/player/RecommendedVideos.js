@@ -1,11 +1,16 @@
 import React, {Component} from 'react';
-import { Link } from "react-router-dom";
 
-import './RecommendedVideos.css';
-
-
+/**
+ * Class RecommendedVideos
+ * Este componente es para la visualizacion de los videos recomendados
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 class RecommendedVideos extends Component{
 
+    /** Renderizacion de los elementos
+     * Primero se itera para obtener los videos recomendados, los cuales recibe como parametros
+     */
     render(){
 
         const video_recommended =  this.props.recommended_videos.map((video, i) => {
@@ -31,9 +36,7 @@ class RecommendedVideos extends Component{
         return(
             <div className="card-block px-3 re-card">
                 <h5 className="card-title">Recommended videos</h5>
-                {
-                    video_recommended
-                }
+                {video_recommended}
             </div>
             );
     }

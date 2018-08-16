@@ -1,3 +1,8 @@
+/**
+ * Archivo principal de la aplicacion
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 

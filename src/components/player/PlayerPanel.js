@@ -1,9 +1,15 @@
 import React, {Component} from 'react';
 
+/** Componentes */
 import VideoPlayer from './VideoPlayer';
 import RecommendedVideos from './RecommendedVideos';
 
-
+/**
+ * Class PlayerPanel
+ * Componente para agrupar los elementos del visualizador de videos
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 class PlayerPanel extends Component{
     
     render(){

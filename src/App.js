@@ -3,8 +3,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Home from './components/home/Home';
 import Player from './components/player/Player';
-//<Route path='/post/:id' />
-
+/**
+ * Class App
+ * Contiene las rutas hacia los componentes principales de la app
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 class App extends Component {
   render(){
     return (

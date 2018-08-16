@@ -1,10 +1,12 @@
 import React, {Component} from 'react';
 
-import './SearchBar.css';
-
+/**
+ * Class SearchBar
+ * Component for the search text input field
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 class SearchBar extends Component{
-
-    
 
     render(){
         return(

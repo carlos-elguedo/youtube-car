@@ -1,8 +1,13 @@
 import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
-import './ResultPanel.css';
-
+/**
+ * Class ResultPanel
+ * Component Responsible for showing the videos resulting from the searches
+ * It contains an iteration to show each resulting video
+ * @author Carlos Elguedo
+ * @version 0.0.1
+ */
 class ResultPanel extends Component{
     
     render(){
