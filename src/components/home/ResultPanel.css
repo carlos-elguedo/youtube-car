@@ -1,0 +1,17 @@
+.re-card-header{
+    background: transparent;
+    padding-left: 15px;
+    padding-top: 10px;
+    padding-bottom: 5px;
+}
+
+.re-section{
+    border: 0px;
+    margin-top: -30px;
+}
+.result-video{
+    margin-bottom: 5%;
+}
+.link-to-player{ 
+    text-decoration:none;
+}
