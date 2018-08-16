@@ -5,7 +5,7 @@ import Home from './components/home/Home';
 import Player from './components/player/Player';
 /**
  * Class App
- * Contiene las rutas hacia los componentes principales de la app
+ * Contains the routes to the main components of the app
  * @author Carlos Elguedo
  * @version 0.0.1
  */

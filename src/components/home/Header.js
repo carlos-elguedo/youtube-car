@@ -2,9 +2,12 @@ import React, {Component} from 'react';
 import { Link } from "react-router-dom";
 
 /**
- * Cabezera de la aplicacion
- * recibe como parametro el texto a mostrar en la barra superior
- * Contiene un enlace a la pagina Home ('/')
+ * Class Header
+ * Header of the application
+ * receives as parameter the text to be displayed in the upper bar
+ * It contains a link to the Home page ('/')
+ * @author Carlos Elguedo
+ * @version 0.0.1
  */
 class Header extends Component{
 

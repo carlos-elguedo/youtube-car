@@ -6,7 +6,7 @@ import RecommendedVideos from './RecommendedVideos';
 
 /**
  * Class PlayerPanel
- * Componente para agrupar los elementos del visualizador de videos
+ * Component to group the elements of the video viewer
  * @author Carlos Elguedo
  * @version 0.0.1
  */

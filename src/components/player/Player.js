@@ -4,15 +4,15 @@ import React, { Component } from 'react';
 import Header from '../home/Header';
 import PlayerPanel from './PlayerPanel'
 
-/** Archivo de configuraciones globales*/
+/** Global configurations file*/
 const config = require('../../config');
 
-/**  Url del video a visualizar*/
+/**  Url of the video to be displayed*/
 const videoIdOfUrl = getParameterByName('videoId');
 
 /**
  * Class Player
- * Este componente contiene a todos los elementos para la pagina de reproduccion de video
+ * This component contains all the elements for the video playback page
  * @author Carlos Elguedo
  * @version 0.0.1
  * 
@@ -20,11 +20,11 @@ const videoIdOfUrl = getParameterByName('videoId');
 class Player extends Component {
   
   /**
-   * Constuctor del componente, aqui se definen en el objeto state, los siguientes atributos
-   * title: Titulo de la barra
-   * videoId: id del video a visualizar
-   * videoDetails: Detalles del video a visualizar
-   * videosRecommended: Videos recomendados al video que se esta visualizando
+   * Constituent of the component, here are defined in the object state, the following attributes
+   * title: Title of the bar
+   * videoId: id of the video to be displayed
+   * videoDetails: Details of the video to be displayed
+   * videosRecommended: Recommended videos to the video that is being viewed
    */
   constructor(){
     super();
@@ -43,9 +43,9 @@ class Player extends Component {
   
 
   /**
-   * Funcion getVideo
-   * Esta funcion es para traer los datos del video a visualizar y almecenar los datos en
-   * las variables state del componente respectivamente
+   * Function getVideo
+   * This function is to bring the data of the video to be visualized and to store the data in
+   * the state variables of the component respectively
    */
   getVideo(){
 
@@ -57,17 +57,17 @@ class Player extends Component {
           });
       });
 
-    //Se invoca este metodo para obtener los videos recomendados
+    //This method is invoked to obtain the recommended videos
     this.getRecommendedVideos();
   }
 
   /**
-   * Funcion getRecommendedVideos
-   * Funcion encargada de obtener los videos relacionados al video que se esta visualizando
+   * Function getRecommendedVideos
+   * Function In charge of obtaining the videos related to the video that is being viewed
    */
   getRecommendedVideos(){
     
-    fetch(config.YOUTUBE_API + `search?key=${config.API_KEY_YOUTUBE}&part=snippet&relatedToVideoId=${this.state.videoId}&type=video&maxResults=10`)
+    fetch(config.YOUTUBE_API + `search?key=${config.API_KEY_YOUTUBE}&part=snippet&relatedToVideoId=${this.state.videoId}&type=video&maxResults=12`)
       .then(res =>res.json())
       .then(data =>{
         this.setState({
@@ -79,9 +79,9 @@ class Player extends Component {
 
 
   /**
-   * Funcion viewNewVideo
-   * Funcion encargada de cambiar el objeto state para visualizar un nuevo video
-   * @param {*} eve indica el id del nuevo video a visualizar 
+   * Function viewNewVideo
+   * Function responsible for changing the state object to view a new video
+   * @param {*} eve indicates the id of the new video to be displayed
    */
   viewNewVideo(eve){
     this.setState({
@@ -93,7 +93,7 @@ class Player extends Component {
 
 
   /**
-   * Renderizacion de los componentes
+   * Rendering components
    */
   render() {
     
@@ -111,9 +111,9 @@ class Player extends Component {
   }
 
 /**
- * Funcion getParameterByName
- * Funcion de utilidad para obtener datos de la url
- * @param {*} name parametro get a obtener 
+ * Function getParameterByName
+ * Function of utility to obtain data from the url
+ * @param {*} name parameter get to get
  */
 function getParameterByName(name) {
     name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");

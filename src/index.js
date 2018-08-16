@@ -1,5 +1,5 @@
 /**
- * Archivo principal de la aplicacion
+ * Main file of the application
  * @author Carlos Elguedo
  * @version 0.0.1
  */

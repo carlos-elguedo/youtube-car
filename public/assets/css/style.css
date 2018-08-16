@@ -19,3 +19,11 @@
     margin-bottom: 10px;
     margin-top: 10px;
 }
+.VideoLink{
+    color: black;
+    text-decoration: none;
+}
+.VideoLink:hover{
+    text-decoration: none;
+    color: black;
+}

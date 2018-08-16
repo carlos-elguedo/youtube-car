@@ -10,17 +10,17 @@ const config = require('../../config');
 
 /**
  * Class Home
- * Este componente agrupara los elementos de la página de busqueda y visualizacion de videos
+ * This component groups the elements of the page of search and visualization of videos
  * @author Carlos Elguedo
  * @version 0.0.1
  */
 class Home extends Component {
 
   /**
-   * El constructor de la clase define varias propiedades para el objeto state y gestionarla dentro del componente:
-   *  result_title: el texto titulo de los resultados de busqueda
-   *  search: el texto buscado
-   *  searched: videos encontrados
+   * The constructor of the class defines several properties for the state object and manages it within the component:
+   *  result_title: the text title of the search results
+   *  search: the search text
+   *  searched: videos finds
    */
   constructor(){
     super();
@@ -34,19 +34,19 @@ class Home extends Component {
   }
 
   /**
-   * Funcion manejadora de evento para cuando el usuario escriba en la barra de busqueda
-   * @param {*} eve evento lanzado
+   * Event handler function for when the user types in the search bar
+   * @param {*} eve event launched
    */
   typing(eve){
-    //se obtiene el valor escrito
+    //you get the written value
     const {value} = eve.target;
 
-    //Se actualiza el objeto state con el texto escrito
+    //The state object is updated with the written text
     this.setState({
         search: value
     });
 
-    //Condicion para cuando el usuario presione la tecla enter
+    //Condition for when the user press the enter key
     if (eve.keyCode === 13 && !eve.shiftKey) {
       eve.preventDefault();
       this.getVideos();
@@ -55,14 +55,14 @@ class Home extends Component {
 }
 
   /**
-  * Funcion getVideos
-  * esta funcion es la encargada de pedir los videos que apareceran como resultados
+  * Function  getVideos
+  * this function is responsible for requesting the videos that will appear as results
   */
   getVideos(){
-    //Se verifica que el texto no este vacio
+    //Verify that the text is not empty
     if(this.state.search!== ""){
-      //Se obtienen los datos
-      fetch(config.YOUTUBE_API + `search?key=${config.API_KEY_YOUTUBE}&part=snippet&q=${this.state.search}&type=video&maxResults=10`)
+      //The data is obtained
+      fetch(config.YOUTUBE_API + `search?key=${config.API_KEY_YOUTUBE}&part=snippet&q=${this.state.search}&type=video&maxResults=12`)
       .then(res =>res.json())
       .then(data =>{
         this.setState({
@@ -71,19 +71,19 @@ class Home extends Component {
           });
       });
     }else{
-      //Si el usuario presiono en buscar sin escribir nada
+      //If the user clicks on search without writing anything
       this.setState({
         result_title: `write somethings`
       });
     }
       
-  }//Fin de la funcion getVideos
+  }
 
 
   
   
   /**
-   * Construccion de la ventana principal de la app
+   * Construction of the main window of the app
    */
   render() {
     return (

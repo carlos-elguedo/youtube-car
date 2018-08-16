@@ -4,15 +4,14 @@ var url = "https://www.youtube.com/embed/";
 
 /**
  * Class VideoPlayer
- * Clase encargada de mostrar el reproductor embebido y los detalles del video a visualizar
+ * Class responsible for showing the embedded player and the details of the video to be displayed
  * @author Carlos Elguedo
  * @version 0.0.1
  */
 class VideoPlayer extends Component{
     
-    /** El componente renderiza el reproductor embebido obteniendo los datos del video actual recibido como parametro
-     * Y los detalles de dicho video
-    */
+    //The component renders the embedded player obtaining the data of the current video received as a parameter
+    //And the details of said video
     render(){
 
         const data = this.props.details.map((video, i) => {
@@ -36,9 +35,9 @@ class VideoPlayer extends Component{
         });
 
         return(
-            <div>
-                {data}
-            </div>
+                <div>
+                    {data}
+                </div>
             );
     }
 }

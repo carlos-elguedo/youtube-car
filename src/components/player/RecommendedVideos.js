@@ -2,14 +2,14 @@ import React, {Component} from 'react';
 
 /**
  * Class RecommendedVideos
- * Este componente es para la visualizacion de los videos recomendados
+ * This component is for viewing the recommended videos
  * @author Carlos Elguedo
  * @version 0.0.1
  */
 class RecommendedVideos extends Component{
 
-    /** Renderizacion de los elementos
-     * Primero se itera para obtener los videos recomendados, los cuales recibe como parametros
+    /** Rendering of the elements
+     * First iterates to get the recommended videos, which receive as parameters
      */
     render(){
 
