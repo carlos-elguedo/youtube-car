@@ -14,8 +14,8 @@ class ResultPanel extends Component{
         const video =  this.props.videos_to_view.map((video, i) => {
             
             return(
-                <Link to={`/player?videoId=${video.id.videoId}`} target="_blank" className="VideoLink">
-                <section className="result-video" key={i}>
+                <Link to={`/player?videoId=${video.id.videoId}`} target="_blank" className="VideoLink" key={i}>
+                <section className="result-video">
                     <div className="container py-3">
                         <div className="card re-section">
                             <div className="row ">
